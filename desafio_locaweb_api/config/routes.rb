@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'most_relevants', :to => 'locaweb_tweets#most_relevants'
+  get 'most_mentions', :to => 'locaweb_tweets#most_mentions'
 end
