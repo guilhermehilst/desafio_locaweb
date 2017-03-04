@@ -31,7 +31,9 @@ class LocawebTweet
                                       :retweet_count => tweet['retweet_count'],
                                       :favourites_count => tweet['favourites_count'],
                                       :text => tweet['text'],
-                                      :created_at => tweet['created_at']
+                                      :created_at => tweet['created_at'],
+                                      :tweet_url => "https://twitter.com/#{tweet['user']['screen_name']}/status/#{tweet['id']}",
+                                      :user_url => "http://twitter.com/#{tweet['user']['screen_name']}"
                                     )
         end
       end
