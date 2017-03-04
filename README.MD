@@ -4,6 +4,8 @@
 
 A aplicação está dividida em duas partes: backend (Ruby on Rails) e frontend (Angular).
 
+O README com as instruções para o desafio encontra-se no arquivo `README-desafio.MD` na raiz do projeto.
+
 ### Standalone
 
 #### - Backend -
