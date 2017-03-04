@@ -61,6 +61,10 @@ Entre na pasta:
 ```
 cd desafio-locaweb-frontend
 ```
+Instale as dependências:
+```
+npm install
+```
 Inicie o servidor:
 ```
 ng serve
