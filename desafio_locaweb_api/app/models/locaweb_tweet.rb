@@ -44,4 +44,8 @@ class LocawebTweet
     end.reverse
   end
 
+  def most_mentions
+    @valid_tweets.group_by{|tweet| tweet.screen_name }
+  end
+
 end

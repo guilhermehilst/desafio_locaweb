@@ -36,4 +36,14 @@ RSpec.describe LocawebTweet, :type => :model do
     end
   end
 
+  describe ".most_mentions" do
+    it "group tweets by screen_name" do
+      @locawebtweet = LocawebTweet.new
+      @locawebtweet.filter
+      @most_mentions = @locawebtweet.most_mentions
+      expect(@most_mentions).not_to be_empty
+      expect(@most_mentions).to be_a_kind_of(Hash)
+    end
+  end
+
 end

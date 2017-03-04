@@ -28,6 +28,11 @@ RSpec.describe LocawebTweetsController, type: :controller do
       expect(response).to be_success
       expect(response).to have_http_status(200)
     end
+
+    it "responds with a valid json" do
+      get :most_mentions
+      expect(response.body).to eq(File.read(File.join(Rails.root, '/spec/fixtures/files/mentions_response_json.txt')))
+    end
   end
 
 end

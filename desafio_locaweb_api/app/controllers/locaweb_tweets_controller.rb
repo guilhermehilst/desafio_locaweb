@@ -8,7 +8,9 @@ class LocawebTweetsController < ApplicationController
 
   def most_mentions
     @locaweb_tweets = LocawebTweet.new
-    render json: @locaweb_tweets.all_tweets
+    @locaweb_tweets.filter
+    @locaweb_tweets.sorted_by_priority
+    render json: @locaweb_tweets.most_mentions.map { |k, value| {screen_name: k, tweets: value} }
   end
 
 end
