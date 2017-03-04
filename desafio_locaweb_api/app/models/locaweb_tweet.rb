@@ -38,4 +38,10 @@ class LocawebTweet
     end
   end
 
+  def sorted_by_priority
+    @valid_tweets.sort_by do |tweet|
+      [tweet.followers_count, tweet.retweet_count, tweet.favourites_count]
+    end.reverse
+  end
+
 end

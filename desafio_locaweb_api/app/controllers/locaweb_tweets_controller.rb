@@ -3,7 +3,7 @@ class LocawebTweetsController < ApplicationController
   def most_relevants
     @locaweb_tweets = LocawebTweet.new
     @locaweb_tweets.filter
-    render json: @locaweb_tweets.valid_tweets
+    render json: @locaweb_tweets.sorted_by_priority
   end
 
   def most_mentions
