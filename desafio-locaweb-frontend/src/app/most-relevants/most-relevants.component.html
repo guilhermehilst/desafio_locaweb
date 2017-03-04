@@ -11,12 +11,12 @@
   </thead>
   <tbody>
     <tr *ngFor="let tweet of tweets">
-      <td>{{tweet.screen_name}}</td>
+      <td><a target="_blank" href="{{tweet.user_url}}">{{tweet.screen_name}}</a></td>
       <td>{{tweet.followers_count}}</td>
       <td>{{tweet.retweet_count}}</td>
       <td>{{tweet.favourites_count}}</td>
       <td>{{tweet.text}}</td>
-      <td>{{tweet.created_at|date:'yMMMdjms'}}</td>
+      <td><a target="_blank" href="{{tweet.tweet_url}}">{{tweet.created_at|date:'yMMMdjms'}}</a></td>
     </tr>
   </tbody>
 </table>
