@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 import { routes } from './app.router'
 import { AppComponent } from './app.component';
 import { MostRelevantsComponent } from './most-relevants/most-relevants.component';
+import { MostMentionsComponent } from './most-mentions/most-mentions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MostRelevantsComponent
+    MostRelevantsComponent,
+    MostMentionsComponent
   ],
   imports: [
     BrowserModule,
