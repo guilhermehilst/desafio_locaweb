@@ -7,3 +7,10 @@ services:
       - "3000:3000"
     volumes:
       - .:/api
+  front:
+    build: ./desafio-locaweb-frontend
+    command: npm start
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/front
